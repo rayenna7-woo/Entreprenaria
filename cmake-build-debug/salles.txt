@@ -1,0 +1,3 @@
+1;Salle A;10;25.00;TV, Projecteur
+2;Salle B;20;35.00;TV, Videoconf
+3;Salle C;8;15.00;Tableau

@@ -1,0 +1,4 @@
+FACTURE #2
+Client: m
+Salle: Salle B
+TOTAL: 70.00 euros
