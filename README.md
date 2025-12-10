@@ -32,47 +32,61 @@ Ce projet offre une solution complète pour gérer efficacement les réservation
 - Système de fichiers structuré pour les factures
 - Configuration externalisée
 
+## 🚀 Installation
 
-🚀 Installation
-Prérequis
+### Prérequis
 
-Compilateur GCC (GNU Compiler Collection)
-Make (outil de compilation)
-Système Linux/Unix ou Windows avec MinGW
+- **Compilateur GCC** (GNU Compiler Collection)
+- **Make** (outil de compilation)
+- Système **Linux/Unix** ou **Windows avec MinGW**
 
-Étapes d'installation
+### Étapes d'installation
 
-Cloner le dépôt :
-
-bashgit clone https://github.com/votre-username/gestion-reservations.git
+1. **Cloner le dépôt**
+```bash
+git clone https://github.com/votre-username/gestion-reservations.git
 cd gestion-reservations
+```
 
-Compiler le projet avec Make :
+2. **Compiler le projet avec Make**
+```bash
+make
+```
 
-bashmake
+3. **Lancer l'application**
+```bash
+./gestion_reservations
+```
 
-Lancer l'application :
+### Compilation manuelle (sans Makefile)
 
-bash./gestion_reservations
-Compilation manuelle (sans Makefile)
-bashgcc -c src/models/*.c src/services/*.c src/utils/*.c
+Si vous préférez compiler manuellement :
+
+```bash
+gcc -c src/models/*.c src/services/*.c src/utils/*.c
 gcc -c src/main.c
 gcc -o gestion_reservations *.o
 ./gestion_reservations
-📖 Utilisation
-Menu Principal
+```
+
+## 📖 Utilisation
+
+### Menu Principal
+
 L'application propose un menu interactif avec les options suivantes :
 
-Créer une nouvelle réservation
-Afficher toutes les réservations
-Modifier une réservation
-Annuler une réservation
-Générer une facture
-Consulter les statistiques
-Gérer les salles
-Quitter
+1. ✨ **Créer une nouvelle réservation**
+2. 📋 **Afficher toutes les réservations**
+3. ✏️ **Modifier une réservation**
+4. ❌ **Annuler une réservation**
+5. 🧾 **Générer une facture**
+6. 📊 **Consulter les statistiques**
+7. 🏢 **Gérer les salles**
+8. 🚪 **Quitter**
 
-Exemple d'utilisation
+```
+### Exemple d'utilisation
+
 === SYSTÈME DE GESTION DE RÉSERVATIONS ===
 
 1. Nouvelle réservation
@@ -95,6 +109,7 @@ Nombre de personnes : 8
   ID : 1001
   Durée : 2 heures
   Tarif : 100.00 TND
+  ```
 
 ## 📦 Modèles de Données
 
