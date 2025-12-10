@@ -33,31 +33,68 @@ Ce projet offre une solution complète pour gérer efficacement les réservation
 - Configuration externalisée
 
 
-## 🚀 Installation
+🚀 Installation
+Prérequis
 
-### Étapes d'installation
+Compilateur GCC (GNU Compiler Collection)
+Make (outil de compilation)
+Système Linux/Unix ou Windows avec MinGW
 
-1. Cloner le dépôt :
-```bash
-git clone https://github.com/votre-username/gestion-reservations.git
+Étapes d'installation
+
+Cloner le dépôt :
+
+bashgit clone https://github.com/votre-username/gestion-reservations.git
 cd gestion-reservations
-```
 
-2. Créer un environnement virtuel (recommandé) :
-```bash
-python -m venv venv
-source venv/bin/activate  # Sur Windows: venv\Scripts\activate
-```
+Compiler le projet avec Make :
 
-3. Installer les dépendances :
-```bash
-pip install -r requirements.txt
-```
+bashmake
 
-4. Lancer l'application :
-```bash
-python src/main.py
-```
+Lancer l'application :
+
+bash./gestion_reservations
+Compilation manuelle (sans Makefile)
+bashgcc -c src/models/*.c src/services/*.c src/utils/*.c
+gcc -c src/main.c
+gcc -o gestion_reservations *.o
+./gestion_reservations
+📖 Utilisation
+Menu Principal
+L'application propose un menu interactif avec les options suivantes :
+
+Créer une nouvelle réservation
+Afficher toutes les réservations
+Modifier une réservation
+Annuler une réservation
+Générer une facture
+Consulter les statistiques
+Gérer les salles
+Quitter
+
+Exemple d'utilisation
+=== SYSTÈME DE GESTION DE RÉSERVATIONS ===
+
+1. Nouvelle réservation
+2. Afficher les réservations
+3. Générer une facture
+4. Statistiques
+5. Quitter
+
+Votre choix : 1
+
+--- Nouvelle Réservation ---
+Nom du client : Jean Dupont
+Salle disponible (Salle A, Salle B, Salle C) : Salle A
+Date (JJ/MM/AAAA) : 15/01/2024
+Heure de début (HH:MM) : 09:00
+Heure de fin (HH:MM) : 11:00
+Nombre de personnes : 8
+
+✓ Réservation créée avec succès !
+  ID : 1001
+  Durée : 2 heures
+  Tarif : 100.00 TND
 
 ## 📦 Modèles de Données
 
