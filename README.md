@@ -144,19 +144,6 @@ Nombre de personnes : 8
 - Historique des réservations par utilisateur
 - Profils personnalisés
 
-## 🧪 Tests
-
-Exécuter les tests unitaires :
-```bash
-python -m pytest tests/
-```
-
-Générer un rapport de couverture :
-```bash
-pytest --cov=src tests/
-```
-
-
 ## 🤝 Contribution
 
 Les contributions sont les bienvenues ! Pour contribuer :
