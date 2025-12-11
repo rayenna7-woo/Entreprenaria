@@ -232,17 +232,8 @@ void afficher_stats() {
 // ============= TACHE 6: PERSISTANCE =============
 
 void sauvegarder() {
-    FILE *f = fopen("salles.txt", "w");
-    if (f) {
-        for (int i = 0; i < nb_salles; i++) {
-            fprintf(f, "%d;%s;%d;%.2f;%s\n", salles[i].id, salles[i].nom,
-                    salles[i].capacite, salles[i].tarif_horaire, salles[i].equipements);
-        }
-        fclose(f);
-    }
-
-    f = fopen("reservations.txt", "w");
-    if (f) {
+    FILE *f = fopen("reservations.txt", "w");
+    if (f!=NULL) {
         for (int i = 0; i < nb_reservations; i++) {
             fprintf(f, "%d;%s;%d;%s;%s;%s;%d;%.2f;%s\n",
                     reservations[i].id, reservations[i].nom_client, reservations[i].salle_id,
@@ -255,19 +246,10 @@ void sauvegarder() {
 }
 
 void charger() {
-    FILE *f = fopen("salles.txt", "r");
-    if (f) {
-        while (fscanf(f, "%d;%49[^;];%d;%f;%99[^\n]\n", &salles[nb_salles].id, salles[nb_salles].nom,
-                      &salles[nb_salles].capacite, &salles[nb_salles].tarif_horaire,
-                      salles[nb_salles].equipements) == 5) {
-            nb_salles++;
-        }
-        fclose(f);
-    }
 
-    f = fopen("reservations.txt", "r");
-    if (f) {
-        while (fscanf(f, "%d;%49[^;];%d;%11[^;];%5[^;];%5[^;];%d;%f;%14[^\n]\n",
+    FILE *f = fopen("reservations.txt", "r");
+    if (f!=NULL) {
+        while (fscanf(f, "%d;%s[^;];%d;%s[^;];%s[^;];%s[^;];%d;%f;%s[^\n]\n",
                       &reservations[nb_reservations].id, reservations[nb_reservations].nom_client,
                       &reservations[nb_reservations].salle_id, reservations[nb_reservations].date,
                       reservations[nb_reservations].heure_debut, reservations[nb_reservations].heure_fin,
@@ -278,6 +260,7 @@ void charger() {
         fclose(f);
     }
 }
+
 
 // ============= TACHE 7 BONUS: ANNULATION =============
 
